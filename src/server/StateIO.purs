@@ -2,7 +2,6 @@ module StateIO (loadState, saveState) where
 
 import ThisPrelude
 
-import Data.Bifunctor (lmap)
 import Data.DateTime.Instant (Instant, instant, unInstant)
 import Data.Time.Duration (Seconds(..), convertDuration)
 import Node.Encoding (Encoding(..))
@@ -10,8 +9,8 @@ import Node.FS.Sync (exists, readTextFile, writeTextFile)
 import Record (modify)
 import Simple.JSON (readJSON)
 import Type.Prelude (Proxy(..))
-import WelcomeEmail.Shared.State (SavedState)
-import WelcomeEmail.Shared.Util (writeJSONPretty)
+import KvmMail.Shared.State (SavedState)
+import KvmMail.Shared.Util (writeJSONPretty)
 
 
 filename :: String

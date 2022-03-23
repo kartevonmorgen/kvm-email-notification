@@ -1,9 +1,8 @@
-module WelcomeEmail.Server.Services.CrudRepo where
+module KvmMail.Server.Services.CrudRepo where
 
 import ThisPrelude
 
 import Data.Array as A
-import Data.Either (note)
 import Data.Generic.Rep (class Generic)
 import Data.Show.Generic (genericShow)
 import Data.Traversable (traverse)
@@ -13,8 +12,8 @@ import Effect.Ref as Ref
 import Node.Encoding (Encoding(..))
 import Node.FS.Aff (readTextFile, writeTextFile)
 import Simple.JSON (readJSON_)
-import WelcomeEmail.Shared.Boundary (class SerDe, deSer, ser)
-import WelcomeEmail.Shared.Util (writeJSONPretty)
+import KvmMail.Shared.Boundary (class SerDe, deSer, ser)
+import KvmMail.Shared.Util (writeJSONPretty)
 
 
 data Error
